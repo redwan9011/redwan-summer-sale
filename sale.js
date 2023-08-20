@@ -2,10 +2,12 @@ let sum = 0
 function clickButton(value){
   const productsNam =  value.childNodes[5].innerText;
   
- const li = document.createElement('li');
- li.innerText = productsNam
- const nameContainer = document.getElementById('product-name-show');
- nameContainer.appendChild(li)
+const nameContainer = document.getElementById('product-name-show');
+const count = nameContainer.childElementCount
+ const p = document.createElement('p');
+p.innerHTML = `${count + 1}. ${p.innerText = productsNam}`
+nameContainer.appendChild(p)
+
 
  const productPricestring = value.childNodes[7].innerText.split(' ')[0];
  const productPrice = parseFloat(productPricestring);
