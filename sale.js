@@ -31,22 +31,7 @@ function clickButton(value){
       discountPrice.innerText =  discount
       finalTotal.innerText = sum - discount
     }
-    
+    cuponName.value = ''
   })
-
-
 }
 
-// document.getElementById('cupon-apply-btn').addEventListener('click', function(){
-
-//   if( cuponName == 'SELL200'){
-//     const discount  = (sum * 20) / 100;
-//     discountPrice.innerText =  discount
-//     finalTotal.innerText = sum - discount
-//   }
-// })
-
-
-// const discount  = (sum * 20) / 100;
-// discountPrice.innerText =  discount
-// finalTotal.innerText = sum - discount
