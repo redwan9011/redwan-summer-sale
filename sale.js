@@ -4,9 +4,9 @@ function clickButton(value){
   
 const nameContainer = document.getElementById('product-name-show');
 const count = nameContainer.childElementCount
- const p = document.createElement('p');
-p.innerHTML = `${count + 1}. ${p.innerText = productsNam}`
-nameContainer.appendChild(p)
+ const li = document.createElement('li');
+li.innerHTML = `${count +1}. ${li.innerText = productsNam}`
+nameContainer.appendChild(li)
 
 
  const productPricestring = value.childNodes[7].innerText.split(' ')[0];
@@ -19,6 +19,7 @@ nameContainer.appendChild(p)
   const discountPrice = document.getElementById('discount-price')
   const finalTotal = document.getElementById('totals')
   finalTotal.innerText = sum 
+ 
 
   const cuponCodeBtn = document.getElementById('cupon-apply-btn')
   if( sum >= 200 ){
@@ -35,5 +36,18 @@ nameContainer.appendChild(p)
     }
     cuponName.value = ''
   })
+  const purchaseBtn = document.getElementById('purchase-btn');
+  if(finalTotal.innerText > 0 ){
+    purchaseBtn.disabled = false;
+  }
+ const homeBtn = document.getElementById('home-btn').addEventListener('click', function(){
+  totalPrice.innerText = '00.00'
+  discountPrice.innerText = '00.00'
+  finalTotal.innerText = '00.00'
+  nameContainer.innerText =''
+  sum = 0;
+ })
+
 }
+
 
